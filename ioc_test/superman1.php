@@ -32,24 +32,6 @@ class Superman
         }
     }
     public function fight(){
-        set_time_limit(0);
-        $num = strval(8662);
-        //var_dump(chunk_split($num,1,' '));exit;
-        //86627817166278171
-        $count = 0;
-        for ($i=1;$i<=$num;$i++){
-            if($i%2 != 0){
-                foreach(explode(' ',chunk_split($i,1,' ')) as $v){
-                    if($v == 3){
-                        $count++;
-                    }
-                }
-            }
-
-        }
-        echo $count;
-        exit;
-        //707829217
         var_dump($this->power);
     }
 }
