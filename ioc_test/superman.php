@@ -23,20 +23,23 @@ function __autoload($classname)
 class Superman
 {
     protected $power;
+    protected $module;
 
-    public function __construct($modules)
+    public function __construct(SuperModuleInterface $modules)
     {
-        $factory = new SuperModuleFactory();
+        $this->module = $modules;
+        /*$factory = new SuperModuleFactory();
         foreach ($modules as $moduleName => $moduleOptions) {
             $this->power[] = $factory->makeModule($moduleName, $moduleOptions);
-        }
+        }*/
+
     }
-    public function fight(){
-        var_dump($this->power);
+
+    public function show(){
+        echo $this->module->activity([1]);
     }
 }
 
-$super = new Superman([
-    'Fight'=>['100','200']
-]);
-$super->fight();
+
+
+
