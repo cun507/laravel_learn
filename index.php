@@ -7,7 +7,6 @@
  * Time: 下午6:43
  */
 function dd($data){
-	$a='测试';
     echo '<pre>';var_dump($data);exit;
 }
 class Superman
